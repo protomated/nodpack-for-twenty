@@ -2,6 +2,10 @@
 
 All notable changes to this application are documented in this file.
 
+## 0.1.2
+
+- Documentation only: README and agent guide now describe the schema-only pack as planned, pending the setup-path decision. No change to the app's entities.
+
 ## 0.1.1
 
 - Package is `nodpack-for-twenty`; display name and description set; logo added.
