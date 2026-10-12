@@ -31,6 +31,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Enable Corepack
+        # package.json pins yarn@4 via packageManager; the runner's default is Yarn 1.
+        run: corepack enable
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
