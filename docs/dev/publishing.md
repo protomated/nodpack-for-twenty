@@ -4,7 +4,7 @@ Twenty servers build their app marketplace from npm packages that carry the `twe
 
 ## One-time setup (TWE-123)
 
-Package name: **`@protomated/nodpack-for-twenty`**, under the `@protomated` scope of the Protomated npm account (a user scope, not an org). Twenty does not require a scope; the marketplace shows the app's `displayName`, not the npm name. The `twenty-app` keyword is set in `package.json`, and `publishConfig.access` is `public` (scoped packages are private by default).
+Package name: **`nodpack-for-twenty`**, unscoped, the same as the repo (TWE-122 asks for matching names). It was free on npm on 12 Oct 2026. Twenty does not require a scope; the marketplace shows the app's `displayName`, not the npm name. The `twenty-app` keyword is set in `package.json`. `publishConfig.access` is `public`, which also keeps a later move to a scope safe.
 
 The Trusted Publisher setting only exists on a package that is already published, so the first release is manual:
 
