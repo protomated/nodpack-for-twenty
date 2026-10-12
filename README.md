@@ -12,7 +12,7 @@ Status (Oct 2026): scaffolded, not yet modelled. The spike that decides whether 
 |---|---|
 | `src/` | The app: application config, default role, constants; objects, fields, views and navigation items go here as they are added. |
 | `src/__tests__/` | Unit tests and integration tests (the latter need a Twenty server). |
-| `public/`, `locales/` | App logo (Nodpack's own) and translations. |
+| `public/`, `locales/` | App logo (`logo.png`, Protomated's mark) and translations. |
 | `docs/design/research/` | Numbered notes: what the app is for, what it may contain, and what the spike must prove. |
 | `docs/dev/` | Developer guides: [publishing and claiming](docs/dev/publishing.md). |
 | `docs/gtm/` | [Naming rules](docs/gtm/01-naming-rules.md) for the app's public name. |

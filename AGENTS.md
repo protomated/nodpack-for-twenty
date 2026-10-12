@@ -30,7 +30,7 @@ This repo is **public**, because Twenty only lets a workspace claim an app that 
 - `src/application-config.ts`, `src/default-role.ts`: the application and its default role. `src/constants/universal-identifiers.ts` holds every universal identifier; add new IDs there.
 - `src/objects/`, `src/fields/`, `src/views/`, `src/navigation-menu-items/`, `src/roles/`: the schema pack. Create each with `yarn twenty dev:add <type>` (table below), not by hand.
 - `src/__tests__/`: unit tests (`*.test.ts`) and integration tests (`*.integration-test.ts`).
-- `public/`: public assets; the logo is Nodpack's own.
+- `public/`: public assets; `logo.png` is Protomated's mark, referenced from `src/application-config.ts`.
 - `locales/`: translations.
 - `docs/design/research/NN-*.md`: numbered notes. Add a new number rather than rewriting an old note; update an old note only to correct it, and say so.
 - `docs/dev/`: developer guides (publishing). `docs/gtm/`: naming rules for the app's public name.
@@ -46,7 +46,7 @@ The scaffold still contains `src/logic-functions/health-check.ts`, `src/front-co
 - `package.json` `version` must strictly increase per release. A sync deletes every entity the app owns that the new manifest no longer declares, so removing an entity is a data-loss change: call it out in the changelog.
 - Set `engines.twenty` to the oldest server version that has been tested, not the newest.
 - Do not add logic functions, front components or install hooks without a decision recorded in `docs/design/research/` (they break the "works on stock self-hosted" promise).
-- Never claim the app is "Vetted" or "official". Use Nodpack's own logo, never Twenty's. See [docs/gtm/01-naming-rules.md](docs/gtm/01-naming-rules.md).
+- Never claim the app is "Vetted" or "official". Use our own logo, never Twenty's. See [docs/gtm/01-naming-rules.md](docs/gtm/01-naming-rules.md).
 - All generated UUIDs must be valid UUID v4.
 
 ### Common pitfalls
