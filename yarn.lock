@@ -881,6 +881,25 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@protomated/nodpack-for-twenty@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "@protomated/nodpack-for-twenty@workspace:."
+  dependencies:
+    "@types/node": "npm:^24.7.2"
+    "@types/react": "npm:^19.0.0"
+    "@typescript/native-preview": "npm:^7.0.0-dev.20260116.1"
+    oxlint: "npm:^0.16.0"
+    react: "npm:^19.0.0"
+    react-dom: "npm:^19.0.0"
+    twenty-client-sdk: "npm:2.45.0"
+    twenty-sdk: "npm:2.45.0"
+    twenty-ui: "npm:2.45.0"
+    typescript: "npm:^5.9.3"
+    vite-tsconfig-paths: "npm:^4.2.1"
+    vitest: "npm:^4.0.0"
+  languageName: unknown
+  linkType: soft
+
 "@rolldown/binding-android-arm-eabi@npm:1.2.11":
   version: 1.2.11
   resolution: "@rolldown/binding-android-arm-eabi@npm:1.2.11"
@@ -2259,25 +2278,6 @@ __metadata:
   checksum: 10c0/12cdb36a101694c7a6b296632e6d93a30b74401873cf7507c88861441a090c71c77a58f213acadad03bc0c8fa186639dec99d68a14497773a8744320c136e701
   languageName: node
   linkType: hard
-
-"my-twenty-app@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "my-twenty-app@workspace:."
-  dependencies:
-    "@types/node": "npm:^24.7.2"
-    "@types/react": "npm:^19.0.0"
-    "@typescript/native-preview": "npm:^7.0.0-dev.20260116.1"
-    oxlint: "npm:^0.16.0"
-    react: "npm:^19.0.0"
-    react-dom: "npm:^19.0.0"
-    twenty-client-sdk: "npm:2.45.0"
-    twenty-sdk: "npm:2.45.0"
-    twenty-ui: "npm:2.45.0"
-    typescript: "npm:^5.9.3"
-    vite-tsconfig-paths: "npm:^4.2.1"
-    vitest: "npm:^4.0.0"
-  languageName: unknown
-  linkType: soft
 
 "nanoid@npm:^3.3.18":
   version: 3.3.19

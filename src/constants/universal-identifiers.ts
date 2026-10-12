@@ -1,5 +1,6 @@
-export const APP_DISPLAY_NAME = 'My twenty app';
-export const APP_DESCRIPTION = '';
+export const APP_DISPLAY_NAME = 'Nodpack for Twenty';
+export const APP_DESCRIPTION =
+  'Sets up the objects, fields, views and role the Nodpack mobile app needs in your Twenty workspace.';
 export const APPLICATION_UNIVERSAL_IDENTIFIER = '51583e7b-80b4-4df9-a166-7e1af5bcc70e';
 export const DEFAULT_ROLE_UNIVERSAL_IDENTIFIER = '17f69cc0-8816-4916-a9c1-100cd7e5a67a';
 export const HEALTH_CHECK_UNIVERSAL_IDENTIFIER = '729c8970-309d-4694-bc20-81154a8c5329';

@@ -1,5 +1,5 @@
 {
-  "name": "my-twenty-app",
+  "name": "@protomated/nodpack-for-twenty",
   "version": "0.1.0",
   "license": "Apache-2.0",
   "engines": {
@@ -7,7 +7,9 @@
     "npm": "please-use-yarn",
     "yarn": ">=4.0.2"
   },
-  "keywords": [],
+  "keywords": [
+    "twenty-app"
+  ],
   "packageManager": "yarn@4.13.0",
   "scripts": {
     "twenty": "twenty",
@@ -31,5 +33,13 @@
     "typescript": "^5.9.3",
     "vite-tsconfig-paths": "^4.2.1",
     "vitest": "^4.0.0"
-  }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/protomated/nodpack-for-twenty.git"
+  },
+  "description": "Companion Twenty app for Nodpack: sets up the objects, fields, views and role the Nodpack mobile app needs."
 }

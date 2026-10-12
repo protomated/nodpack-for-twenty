@@ -4,10 +4,15 @@ Twenty servers build their app marketplace from npm packages that carry the `twe
 
 ## One-time setup (TWE-123)
 
-1. Choose the package name. Provisional: `nodpack-for-twenty` (matches the repo). It must also carry the `twenty-app` keyword in `package.json`.
-2. Reserve it under a Protomated-owned npm account or organisation with 2FA on. Keep the login in the team's password manager.
-3. On npmjs.com, open the package > Settings > Trusted Publisher and register this repository and the `publish.yml` workflow. The first publish of a new name may need to be done once before the trusted publisher can be registered; record what was done.
-4. Make sure `package.json` has the real name, `license: Apache-2.0` and the keyword, and regenerate `yarn.lock` (`publish.yml` runs `yarn install --immutable`).
+Package name: **`@protomated/nodpack-for-twenty`**, under the `@protomated` scope of the Protomated npm account (a user scope, not an org). Twenty does not require a scope; the marketplace shows the app's `displayName`, not the npm name. The `twenty-app` keyword is set in `package.json`, and `publishConfig.access` is `public` (scoped packages are private by default).
+
+The Trusted Publisher setting only exists on a package that is already published, so the first release is manual:
+
+1. Use Node 24.5+ (`nvm install && nvm use`, from `.nvmrc`), and make sure the npm account has 2FA on.
+2. `npm login`, then from the repo root: `TWENTY_APP_PUBLISH_DISABLE_PROVENANCE=true yarn twenty app:publish`. This builds and runs `npm publish --access public`. Provenance only works from GitHub Actions, so `0.1.0` has none and cannot be claimed.
+3. On npmjs.com open the package > Settings > Trusted Publisher and register GitHub Actions, user `protomated`, repository `nodpack-for-twenty`, workflow `publish.yml`, no environment. No npm token or GitHub secret is needed after this.
+4. Bump the version (a published version can never be reused) and release from CI as below.
+5. Record the name on TWE-97 and close TWE-123. Keep the npm login in the team's password manager.
 
 ## Releasing
 
