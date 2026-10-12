@@ -1,6 +1,6 @@
 # Nodpack for Twenty
 
-A companion [Twenty](https://twenty.com) app for [Nodpack](https://nodpack.com), the mobile CRM app for Twenty. It is a **schema-only pack**: it sets up the objects, fields, views and role that Nodpack needs in a Twenty workspace (message templates, logged calls and texts), so every workspace gets the same defaults. It ships no logic functions, so it installs on a stock self-hosted Twenty as well as on Twenty Cloud.
+A companion [Twenty](https://twenty.com) app for [Nodpack](https://nodpack.com), the mobile CRM app for Twenty. It is planned as a **schema-only pack**: it would set up the objects, fields, views and role that Nodpack needs in a Twenty workspace (message templates, logged calls and texts), so every workspace gets the same defaults, with no logic functions so that it can install on a stock self-hosted Twenty as well as on Twenty Cloud. Whether it becomes the setup path is decided in TWE-100.
 
 Nodpack is an independent product of Protomated. It is not affiliated with or endorsed by Twenty.
 

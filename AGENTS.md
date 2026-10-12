@@ -21,7 +21,7 @@ Node and Yarn versions: `.nvmrc` and `package.json` (`engines`, `packageManager`
 
 ## What this repo is
 
-"Nodpack for Twenty" is a **schema-only** companion Twenty app: it declares the objects, fields, views and role that the Nodpack mobile app needs in a user's Twenty workspace (message templates, logged calls and texts). It has **no logic functions**, so it installs on a stock self-hosted server where logic functions are disabled by default. Background: [docs/design/research/01-companion-app-scope.md](docs/design/research/01-companion-app-scope.md).
+"Nodpack for Twenty" is a companion Twenty app that is **planned as a schema-only pack**: it would declare the objects, fields, views and role that the Nodpack mobile app needs in a user's Twenty workspace (message templates, logged calls and texts) and ship no logic functions, so it can install on a stock self-hosted server where logic functions are disabled by default. That is a working assumption, not a decision: whether the pack is the setup path at all is decided in TWE-100, after the TWE-99 spike. Until then, treat "schema-only" as the default to keep, not a rule to defend. It is also unsettled whether this repo is the TWE-99 throwaway spike app or the real app that follows; TWE-99 calls its app "throwaway", TWE-122 creates this repo as the app's home. Background: [docs/design/research/01-companion-app-scope.md](docs/design/research/01-companion-app-scope.md).
 
 This repo is **public**, because Twenty only lets a workspace claim an app that was published from a public GitHub repo with npm trusted publishing and provenance. The licence is Apache-2.0 (`LICENSE`). The Nodpack mobile app lives in a separate private repo, protomated/app-nodpack.
 
@@ -37,7 +37,7 @@ This repo is **public**, because Twenty only lets a workspace claim an app that 
 - `.github/workflows/`: `ci.yml` (spawns an ephemeral Twenty and runs the tests on every push and PR), `cd.yml` (deploy-and-install check against an ephemeral Twenty on push to `main`, or on a PR labelled `deploy`), `publish.yml` (npm with provenance, on a `v*` tag or a manual run).
 - Never hand-edit `generated/` or `*.d.ts` files; they are git-ignored.
 
-The scaffold still contains `src/logic-functions/health-check.ts`, `src/front-components/main-page.tsx`, `src/page-layouts/` and `src/navigation-menu-items/main-page.*`. A schema-only pack must **remove all four** before install tests on a functions-disabled server, or the test measures the wrong thing.
+The scaffold still contains `src/logic-functions/health-check.ts`, `src/front-components/main-page.tsx`, `src/page-layouts/` and `src/navigation-menu-items/main-page.*`. The spike plan (note 08, check F1) says to remove all four before install tests on a functions-disabled server, or the test measures the wrong thing. This is guidance for the F2 test, not a requirement of TWE-122 or TWE-123; the published `0.1.0` still contains them.
 
 ## Twenty app rules
 
@@ -45,7 +45,7 @@ The scaffold still contains `src/logic-functions/health-check.ts`, `src/front-co
 - Uninstalling an app **deletes its data** (destroyed objects drop their rows and the values of app-owned fields). Anything user-facing must say so; do not add a feature that stores irreplaceable data here without an export path.
 - `package.json` `version` must strictly increase per release. A sync deletes every entity the app owns that the new manifest no longer declares, so removing an entity is a data-loss change: call it out in the changelog.
 - Set `engines.twenty` to the oldest server version that has been tested, not the newest.
-- Do not add logic functions, front components or install hooks without a decision recorded in `docs/design/research/` (they break the "works on stock self-hosted" promise).
+- Avoid adding logic functions, front components or install hooks until TWE-100 has decided the setup path; they would break the "installs on stock self-hosted with functions disabled" property that check F2 is testing. If you add one, record why in `docs/design/research/`.
 - Never claim the app is "Vetted" or "official". Use our own logo, never Twenty's. See [docs/gtm/01-naming-rules.md](docs/gtm/01-naming-rules.md).
 - All generated UUIDs must be valid UUID v4.
 

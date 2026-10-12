@@ -4,7 +4,7 @@ Status: draft, Oct 2026. Source: the Twenty app platform docs and source as read
 
 ## Answer
 
-"Nodpack for Twenty" is a declarative, schema-only Twenty app. It creates what the Nodpack mobile app needs to store in a workspace and nothing that needs server-side code. If the spike passes, it is the way a workspace gets set up; if not, the phone creates the same objects through the Metadata API and this repo is retired.
+"Nodpack for Twenty" is planned as a declarative, schema-only Twenty app (the working assumption from TWE-122 and TWE-99; not decided until TWE-100). It would create what the Nodpack mobile app needs to store in a workspace and nothing that needs server-side code. If the spike passes, it is the way a workspace gets set up; if not, the phone creates the same objects through the Metadata API and this repo is retired.
 
 ## In scope
 
