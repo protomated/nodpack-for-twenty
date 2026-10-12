@@ -1,7 +1,7 @@
 {
   "name": "my-twenty-app",
   "version": "0.1.0",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "engines": {
     "node": "^24.5.0",
     "npm": "please-use-yarn",
